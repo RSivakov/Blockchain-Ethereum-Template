@@ -3,7 +3,7 @@ pragma solidity ^0.5.0;
 contract HelloBlockchain
 {
      //Set of States
-    enum StateType { Request, Respond}
+    enum StateType { Request, Respond }
 
     //List of properties
     StateType public  State;
@@ -18,7 +18,6 @@ contract HelloBlockchain
     // constructor function
     constructor(string memory message) public
     {
-        Requestor = msg.sender;
         RequestMessage = message;
         State = StateType.Request;
 
@@ -28,10 +27,7 @@ contract HelloBlockchain
     // call this function to send a request
     function SendRequest(string memory requestMessage) public
     {
-        if (Requestor != msg.sender)
-        {
-            revert();
-        }
+        Requestor = msg.sender;
 
         RequestMessage = requestMessage;
         State = StateType.Request;
