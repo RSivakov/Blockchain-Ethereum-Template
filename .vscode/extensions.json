@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "plutonist.sync",
-        "ms-ceintl.vscode-language-pack-ru"
+        "ms-ceintl.vscode-language-pack-ru",
+        "shan.code-settings-sync"
     ]
 }
